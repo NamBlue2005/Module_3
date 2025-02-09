@@ -13,9 +13,9 @@ create table teacher(
 );
 
 insert into class (name) values
-('Toán'),
-('Văn'),
-('Lịch sử');
+('Lớp 12A1'),
+('Lớp 11A4'),
+('Lớp 10A3');
 
 insert into teacher (name, age, country) values
 ('Nguyễn Văn A', 40, 'Việt Nam'),
