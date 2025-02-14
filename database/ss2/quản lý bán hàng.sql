@@ -5,7 +5,7 @@ use quan_ly_ban_hang ;
 CREATE TABLE customer (
     c_id INT AUTO_INCREMENT PRIMARY KEY,
     c_name VARCHAR(50) NOT NULL,
-    c_age DATE NOT NULL
+    c_age INT NOT NULL
 );
 
 CREATE TABLE orders (
