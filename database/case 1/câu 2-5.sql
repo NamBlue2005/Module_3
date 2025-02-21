@@ -25,7 +25,7 @@ SELECT
     dv.ten_dich_vu, 
     hd.ngay_lam_hop_dong, 
     hd.ngay_ket_thuc,
-    COALESCE(SUM(hdct.so_luong * dvdk.gia), 0) + COALESCE(SUM(dv.chi_phi_thue), 0) AS tong_tien
+    SUM(IFNULL(hdct.so_luong * dvdk.gia, 0)) + SUM(IFNULL(dv.chi_phi_thue, 0)) AS tong_tien
 FROM khach_hang k
 LEFT JOIN loai_khach lk ON k.ma_loai_khach = lk.ma_loai_khach
 LEFT JOIN hop_dong hd ON k.ma_khach_hang = hd.ma_khach_hang
