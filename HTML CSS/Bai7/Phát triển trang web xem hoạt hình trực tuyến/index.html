@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Video Doraemon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="brand">
+        <span>Phim <span class="highlight">Hoạt Hình</span></span>
+    </div>
+    <nav class="nav-links">
+        <a href="#">Phim hoạt hình</a>
+        <a href="#">Phim Hoạt hình yêu thích</a>
+        <a href="#">Nhân vật hoạt hình</a>
+        <a href="#">Góp ý</a>
+    </nav>
+</header>
+
+<div class="main-container">
+    <div class="video-list-section">
+        <h3>Danh sách video</h3>
+        <div class="video-list">
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/EGoE47R1rYM', 'Doraemon Season 6 - Tập 1', 'Trong tập này, Nobita vô tình tìm thấy một bảo bối đặc biệt của Doraemon – chiếc vòng dịch chuyển tức thời. Ban đầu, cậu bé sử dụng nó để trốn tránh bài tập và đi chơi, nhưng sau đó lại bị Jaian và Suneo phát hiện. Một cuộc rượt đuổi hài hước diễn ra khiến cả nhóm bị cuốn vào một cuộc phiêu lưu không ngờ tới. Liệu Doraemon có thể giúp Nobita sửa chữa sai lầm không?')">
+                <img src="https://img.youtube.com/vi/EGoE47R1rYM/hqdefault.jpg" alt="Doraemon Season 6 - Tập 1">
+                <p><strong>Doraemon Season 6 - Tập 1</strong></p>
+            </div>
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/LX7bl4CTMl0', 'Doraemon Video 1', 'Jaian quyết định tổ chức một buổi biểu diễn âm nhạc, nhưng giọng hát của cậu ấy quá tệ khiến mọi người khiếp sợ. Nobita tình cờ có được một bảo bối giúp biến giọng hát thành hay tuyệt đối. Tuy nhiên, Jaian không muốn bị đánh bại và tìm cách phá hoại bảo bối của Nobita. Cuộc chiến âm nhạc này sẽ có kết quả như thế nào?')">
+                <img src="https://img.youtube.com/vi/LX7bl4CTMl0/hqdefault.jpg" alt="Doraemon Video 1">
+                <p><strong>Doraemon Video 1</strong></p>
+            </div>
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/FMUHcQbk1HI', 'Doraemon Video 2', 'Nobita muốn trở thành một siêu anh hùng như trong truyện tranh mà cậu ấy yêu thích. Doraemon cho cậu bé mượn bộ trang phục biến hình siêu nhân. Tuy nhiên, Nobita lại quá lạm dụng nó, gây ra một loạt rắc rối trong trường học. Giáo viên của Nobita bắt đầu nghi ngờ và quyết định điều tra. Doraemon phải nhanh chóng can thiệp trước khi mọi chuyện đi quá xa!')">
+                <img src="https://img.youtube.com/vi/FMUHcQbk1HI/hqdefault.jpg" alt="Doraemon Video 2">
+                <p><strong>Doraemon Video 2</strong></p>
+            </div>
+            <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/smQV6mHxYfc', 'Doraemon Video Mới', 'Trong tập mới này, Doraemon và Nobita phát hiện ra một chiếc máy thời gian hỏng trong tủ bảo bối. Khi họ thử sửa chữa nó, họ vô tình bị đưa đến một thế giới tương lai, nơi công nghệ tiên tiến nhưng lại có những bí ẩn đáng sợ. Họ gặp một nhân vật bí ẩn, người nắm giữ chìa khóa để trở về nhà. Liệu Nobita và Doraemon có thể quay về an toàn không?')">
+                <img src="https://img.youtube.com/vi/smQV6mHxYfc/hqdefault.jpg" alt="Doraemon Video Mới">
+                <p><strong>Doraemon Video Mới</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-display">
+        <iframe id="videoFrame" src="https://www.youtube.com/embed/EGoE47R1rYM" allowfullscreen></iframe>
+        <h2 id="videoTitle">Doraemon Season 6 - Tập 1</h2>
+        <p id="videoText">Trong tập này, Nobita vô tình tìm thấy một bảo bối đặc biệt
+            của Doraemon – chiếc vòng dịch chuyển tức thời. Ban đầu, cậu bé sử dụng nó để trốn tránh bài tập và đi chơi,
+            nhưng sau đó lại bị Jaian và Suneo phát hiện. Một cuộc rượt đuổi hài hước diễn ra khiến cả nhóm bị cuốn vào một
+            cuộc phiêu lưu không ngờ tới. Liệu Doraemon có thể giúp Nobita sửa chữa sai lầm không?</p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Bản quyền
+</footer>
+
+<script>
+    function changeVideo(url, title, description) {
+        document.getElementById('videoFrame').src = url;
+        document.getElementById('videoTitle').innerText = title;
+        document.getElementById('videoText').innerText = description;
+    }
+</script>
+
+</body>
+</html>
