@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,15 @@
 </head>
 <body class="container mt-4">
 <h2 class="text-center">Chỉnh sửa sản phẩm</h2>
+
+<!-- Hiển thị thông báo nếu có -->
+<c:if test="${not empty message}">
+    <div class="alert alert-success text-center">${message}</div>
+</c:if>
+<c:if test="${not empty error}">
+    <div class="alert alert-danger text-center">${error}</div>
+</c:if>
+
 <form action="products" method="post" class="mx-auto w-50 border p-4 shadow rounded">
     <input type="hidden" name="action" value="edit">
     <input type="hidden" name="id" value="${product.id}">
@@ -23,7 +33,7 @@
 
     <div class="mb-3">
         <label for="description" class="form-label">Mô tả:</label>
-        <input type="text" id="description" name="description" class="form-control" value="${product.description}">
+        <textarea id="description" name="description" class="form-control">${product.description}</textarea>
     </div>
 
     <div class="mb-3">
@@ -33,6 +43,7 @@
 
     <button type="submit" class="btn btn-success w-100">Cập nhật</button>
 </form>
+
 <div class="text-center mt-3">
     <a href="products" class="btn btn-secondary">Quay lại danh sách</a>
 </div>
